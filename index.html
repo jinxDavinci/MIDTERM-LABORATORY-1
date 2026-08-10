@@ -18,19 +18,23 @@
       body {
         background-color: #f5f5f5;
       }
+
       .hero {
         padding: 70px 20px;
       }
+
       .profile {
         width: 180px;
         height: 180px;
         object-fit: cover;
         border-radius: 50%;
       }
+
       .gallery-img {
         height: 220px;
         object-fit: cover;
       }
+
       section {
         padding: 60px 0;
       }
@@ -38,10 +42,12 @@
   </head>
 
   <body>
-    <!-- ================= NAVBAR ================= -->
+    <!-- Component 1: Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
       <div class="container">
         <a class="navbar-brand fw-bold" href="#home"> JV's Portfolio </a>
+
+        <!-- Component 2: Collapse -->
         <button
           class="navbar-toggler"
           type="button"
@@ -50,6 +56,7 @@
         >
           <span class="navbar-toggler-icon"></span>
         </button>
+
         <div class="collapse navbar-collapse" id="menu">
           <ul class="navbar-nav ms-auto">
             <li class="nav-item">
@@ -64,25 +71,43 @@
               <a class="nav-link" href="#gallery">Gallery</a>
             </li>
 
-            <li class="nav-item">
-              <a class="nav-link" href="#skills">Skills</a>
+            <!-- Component 12: Dropdown -->
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+              >
+                Skills
+              </a>
+
+              <ul class="dropdown-menu">
+                <li>
+                  <a class="dropdown-item" href="#skills"> My Skills </a>
+                </li>
+
+                <li>
+                  <a class="dropdown-item" href="#contact"> Contact Me </a>
+                </li>
+              </ul>
             </li>
 
-            <li class="nav-item">
-              <a class="nav-link" href="#contact">Contact</a>
-            </li>
           </ul>
         </div>
       </div>
     </nav>
 
-    <!-- ================= HOME ================= -->
+    <!-- HOME -->
     <section id="home" class="hero bg-primary text-white">
+      <!-- Bootstrap Grid System -->
       <div class="container">
         <div class="row align-items-center">
           <div class="col-md-7 text-center text-md-start">
-            <!-- Bootstrap Badge -->
-            <span class="badge bg-warning text-dark mb-3"> 2IT-A Student </span>
+            <!-- Component 3: Badge -->
+            <span class="badge bg-warning text-black mb-3">
+              2IT-A Student
+            </span>
 
             <h1 class="fw-bold">Welcome to My Portfolio</h1>
 
@@ -93,7 +118,7 @@
               and technology.
             </p>
 
-            <!-- Bootstrap Buttons -->
+            <!-- Component 4: Button -->
             <a href="#about" class="btn btn-light me-2"> About Me </a>
 
             <button
@@ -104,9 +129,10 @@
               More Info
             </button>
           </div>
+
           <div class="col-md-5 text-center mt-4 mt-md-0">
             <img
-              src="photos/profilePic.jpg"
+              src="profilePic.jpg"
               alt="Profile Picture"
               class="profile img-fluid"
             />
@@ -115,11 +141,12 @@
       </div>
     </section>
 
-    <!-- ================= ALERT ================= -->
+    <!-- Component 5: Alert -->
     <div class="container mt-4">
       <div class="alert alert-info alert-dismissible fade show">
         <strong>Welcome!</strong>
         Thank you for visiting my portfolio.
+
         <button
           type="button"
           class="btn-close"
@@ -128,13 +155,16 @@
       </div>
     </div>
 
-    <!-- ================= ABOUT ================= -->
+    <!--  ABOUT  -->
     <section id="about">
       <div class="container">
         <h2 class="text-center mb-5">About Me</h2>
+
+        <!-- Bootstrap Grid System -->
         <div class="row">
           <div class="col-md-6">
             <h4>Who Am I?</h4>
+
             <p>
               Hi! I'm Jhan Vincent E. Miraples, a college student interested in
               programming, web development, and technology.
@@ -147,6 +177,7 @@
           </div>
 
           <div class="col-md-6">
+            <!-- Component 6: Accordion -->
             <div class="accordion" id="aboutAccordion">
               <div class="accordion-item">
                 <h2 class="accordion-header">
@@ -199,17 +230,14 @@
       </div>
     </section>
 
-    <!-- ================= GALLERY ================= -->
-
+    <!--  GALLERY  -->
     <section id="gallery" class="bg-light">
       <div class="container">
         <h2 class="text-center mb-3">My Gallery</h2>
 
-        <p class="text-center mb-4">
-          Some pictures of my interests and activities.
-        </p>
+        <p class="text-center mb-4">Some pictures of me.</p>
 
-        <!-- Bootstrap Carousel -->
+        <!-- Component 7: Carousel -->
         <div
           id="galleryCarousel"
           class="carousel slide mb-5"
@@ -218,25 +246,27 @@
           <div class="carousel-inner">
             <div class="carousel-item active">
               <img
-                src="photos/beach.jpg"
+                src="silhouette.jpg"
                 class="d-block w-100"
-                style="height: 350px; object-fit: cover"
+                style="height: 750px; object-fit: cover"
                 alt="Beach"
               />
             </div>
+
             <div class="carousel-item">
               <img
-                src="photos/abay.jpg"
+                src="5yearsold.jpg"
                 class="d-block w-100"
-                style="height: 350px; object-fit: cover"
+                style="height: 750px; object-fit: cover"
                 alt="Abay"
               />
             </div>
+
             <div class="carousel-item">
               <img
-                src="photos/playingguitar.jpg"
+                src="teddy.jpg"
                 class="d-block w-100"
-                style="height: 350px; object-fit: cover"
+                style="height: 750px; object-fit: cover"
                 alt="Playing Guitar"
               />
             </div>
@@ -261,15 +291,17 @@
           </button>
         </div>
 
-        <!-- Cards + Grid -->
+        <!-- Bootstrap Grid System -->
         <div class="row g-4">
+          <!-- Component 8: Card -->
           <div class="col-sm-6 col-lg-3">
             <div class="card h-100">
               <img
-                src="photos/coding.jpg"
+                src="coding.jpg"
                 class="card-img-top gallery-img"
                 alt="Coding"
               />
+
               <div class="card-body">
                 <h5 class="card-title">Coding</h5>
 
@@ -283,10 +315,11 @@
           <div class="col-sm-6 col-lg-3">
             <div class="card h-100">
               <img
-                src="photos/chess.jpg"
+                src="chess.jpg"
                 class="card-img-top gallery-img"
                 alt="Chess"
               />
+
               <div class="card-body">
                 <h5 class="card-title">Chess</h5>
 
@@ -300,7 +333,7 @@
           <div class="col-sm-6 col-lg-3">
             <div class="card h-100">
               <img
-                src="photos/chessjersey.jpg"
+                src="chessjersey.jpg"
                 class="card-img-top gallery-img"
                 alt="Chess Jersey"
               />
@@ -316,7 +349,7 @@
           <div class="col-sm-6 col-lg-3">
             <div class="card h-100">
               <img
-                src="photos/guitar.jpg"
+                src="guitar.jpg"
                 class="card-img-top gallery-img"
                 alt="Guitar"
               />
@@ -334,14 +367,14 @@
       </div>
     </section>
 
-    <!-- ================= SKILLS ================= -->
+    <!--  SKILLS  -->
 
     <section id="skills">
       <div class="container">
         <h2 class="text-center mb-5">My Skills</h2>
 
+        <!-- Bootstrap Grid System -->
         <div class="row g-4">
-          <!-- Skill 1 -->
           <div class="col-md-6 col-lg-3">
             <div class="card h-100">
               <div class="card-body">
@@ -351,7 +384,7 @@
                   Basic object-oriented programming and application development.
                 </p>
 
-                <!-- Bootstrap Progress -->
+                <!-- Component 9: Progress Bar -->
                 <div class="progress">
                   <div class="progress-bar" style="width: 75%">75%</div>
                 </div>
@@ -359,7 +392,6 @@
             </div>
           </div>
 
-          <!-- Skill 2 -->
           <div class="col-md-6 col-lg-3">
             <div class="card h-100">
               <div class="card-body">
@@ -376,7 +408,6 @@
             </div>
           </div>
 
-          <!-- Skill 3 -->
           <div class="col-md-6 col-lg-3">
             <div class="card h-100">
               <div class="card-body">
@@ -393,7 +424,6 @@
             </div>
           </div>
 
-          <!-- Skill 4 -->
           <div class="col-md-6 col-lg-3">
             <div class="card h-100">
               <div class="card-body">
@@ -413,11 +443,13 @@
       </div>
     </section>
 
-    <!-- ================= CONTACT ================= -->
+    <!--  CONTACT  -->
+
     <section id="contact" class="bg-light">
       <div class="container">
         <h2 class="text-center mb-5">Contact Me</h2>
 
+        <!-- Bootstrap Grid System -->
         <div class="row">
           <div class="col-md-6">
             <h4>Personal Information</h4>
@@ -435,8 +467,10 @@
             </p>
           </div>
 
-          <!-- Bootstrap Form -->
           <div class="col-md-6">
+            <!-- Bootstrap Form
+                 Form and Form Controls are not included
+                 in the 13-component count. -->
             <form>
               <div class="mb-3">
                 <label class="form-label"> Name </label>
@@ -450,6 +484,7 @@
 
               <div class="mb-3">
                 <label class="form-label"> Email </label>
+
                 <input
                   type="email"
                   class="form-control"
@@ -459,13 +494,14 @@
 
               <div class="mb-3">
                 <label class="form-label"> Message </label>
+
                 <textarea
                   class="form-control"
                   rows="4"
                   placeholder="Write your message"
-                >
-                </textarea>
+                ></textarea>
               </div>
+
               <button type="submit" class="btn btn-primary">
                 Send Message
               </button>
@@ -475,22 +511,27 @@
       </div>
     </section>
 
-    <!-- ================= MODAL ================= -->
+    <!--  MODAL  -->
+
+    <!-- Component 10: Modal -->
     <div class="modal fade" id="infoModal" tabindex="-1">
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
             <h5 class="modal-title">About Me</h5>
+
             <button
               type="button"
               class="btn-close"
               data-bs-dismiss="modal"
             ></button>
           </div>
+
           <div class="modal-body">
             I am a 2IT-A student interested in programming, web development,
             databases, and technology.
           </div>
+
           <div class="modal-footer">
             <button
               type="button"
@@ -504,20 +545,75 @@
       </div>
     </div>
 
-    <!-- ================FOOTER ================= -->
-    <footer class="bg-dark text-white text-center py-4">
+    <!--  LIST GROUP  -->
+
+    <!-- Component 11: List Group -->
+    <section class="bg-dark text-white py-4">
       <div class="container">
-        <p class="mb-1">Jhan Vincent E. Miraples</p>
+        <h5 class="text-center mb-3">Portfolio Information</h5>
 
-        <p class="mb-0">2IT-A | © 2026</p>
+        <div class="list-group">
+          <a href="#home" class="list-group-item list-group-item-action">
+            Home
+          </a>
+
+          <a href="#about" class="list-group-item list-group-item-action">
+            About Me
+          </a>
+
+          <a href="#gallery" class="list-group-item list-group-item-action">
+            Gallery
+          </a>
+
+          <a href="#skills" class="list-group-item list-group-item-action">
+            My Skills
+          </a>
+
+          <a href="#contact" class="list-group-item list-group-item-action">
+            Contact Me
+          </a>
+        </div>
+
+        <!-- Component 13: Pagination -->
+        <nav class="mt-4" aria-label="Portfolio navigation">
+          <ul class="pagination justify-content-center">
+            <li class="page-item disabled">
+              <a class="page-link" href="#"> Previous </a>
+            </li>
+
+            <li class="page-item active">
+              <a class="page-link" href="#home"> 1 </a>
+            </li>
+
+            <li class="page-item">
+              <a class="page-link" href="#about"> 2 </a>
+            </li>
+
+            <li class="page-item">
+              <a class="page-link" href="#gallery"> 3 </a>
+            </li>
+
+            <li class="page-item">
+              <a class="page-link" href="#skills"> 4 </a>
+            </li>
+
+            <li class="page-item">
+              <a class="page-link" href="#contact"> Next </a>
+            </li>
+          </ul>
+        </nav>
+
+        <p class="text-center mt-4 mb-0">
+          Jhan Vincent E. Miraples | 2IT-A | © 2026
+        </p>
       </div>
-    </footer>
+    </section>
 
-    <!-- Bootstrap JavaScript -->
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
       crossorigin="anonymous"
     ></script>
+
   </body>
 </html>
